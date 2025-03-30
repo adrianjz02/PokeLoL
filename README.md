@@ -15,6 +15,14 @@ Le but ultime du jeu est de progresser collectivement à travers 100 paliers de 
 - Plus le serveur atteint un palier élevé, plus les gains des activités quotidiennes et hebdomadaires sont importants pour tous les joueurs
 - Le système de types et faiblesses se débloque progressivement à partir des paliers intermédiaires, ajoutant une nouvelle dimension stratégique au mid/late game
 
+### Stratégie globale
+- Augmenter au maximum le niveau des champions pour renforcer leur puissance
+- Augmenter le niveau de dresseur pour débloquer des bonus et accéder à plus de ressources
+- Constituer des équipes optimisées pour contrer les faiblesses des monstres et boss
+- Équiper les bons skins pour profiter des avantages élémentaires
+- Progresser collectivement jusqu'au palier 100
+- Dans le mid/late game, adapter sa stratégie selon les faiblesses du boss de palier
+
 ## Fonctionnalités principales
 
 ### Système de démarrage
@@ -108,21 +116,26 @@ Le but ultime du jeu est de progresser collectivement à travers 100 paliers de 
   - Statistiques détaillées post-raid (dégâts infligés, soins, etc.)
 
 ### Personnalisation des champions
-- Attribution d'items pour améliorer les stats
-- Changement de skins modifiant les statistiques et l'élément
-- Classes de champions : Tank, Bruiser, DPS, Healer, Shielder
-- Statistiques de base : HP, ARMOR, RM, AP, AD, AS
-- Puissance augmentée par le système de doublons
-- Système de types et faiblesses (débloqué aux paliers intermédiaires) qui ajoute des bonus/malus lors des combats
+- **Système de skins** :
+  - Chaque skin confère un type élémentaire spécifique au champion (Feu, Eau, Air, Terre, Ombre, Lumière, etc.)
+  - Le champion attaquera avec cet élément, sans bonus de statistiques additionnels
+  - Essentiel en mid/late game pour exploiter les faiblesses des boss de palier
 
-### Profil et statistiques
-- Vue détaillée du profil du dresseur
-- Niveau de dresseur et progression vers le niveau suivant
-- Nombre total de PokéLoL capturés et pourcentage de complétion du Pokédex
-- Statistiques de combat (victoires, défaites, dégâts totaux, etc.)
-- Suivi de toutes les activités disponibles et de leur temps de recharge
-- Monnaies et ressources possédées
-- Accomplissements débloqués
+- **Système d'objets** :
+  - Items de League of Legends disponibles dans la boutique
+  - Chaque item confère des bonus de statistiques (PV, armure, dégâts, soin, etc.)
+  - Les champions bénéficient de bonus amplifiés selon leur classe:
+    - Les tanks reçoivent 100% de bonus supplémentaire sur les stats défensives des items de tank
+    - Les DPS gagnent des bonus amplifiés sur les items de dégâts
+    - Les healers obtiennent des bonus sur les items de soin
+  - La synergie entre classe du champion et type d'item est cruciale pour optimiser les performances
+
+- **Classes de champions** : Tank, Bruiser, DPS, Healer, Shielder
+- **Statistiques de base** : HP, ARMOR, RM, AP, AD, AS
+- **Puissance augmentée** par le système de doublons
+- **Système de types et faiblesses** (débloqué aux paliers intermédiaires):
+  - Chaque boss de palier aura une faiblesse élémentaire spécifique
+  - L'objectif stratégique sera de constituer une équipe avec des éléments efficaces contre le boss
 
 ## Commandes principales
 - `/starter` - Choisir son champion de départ
@@ -146,6 +159,8 @@ Le but ultime du jeu est de progresser collectivement à travers 100 paliers de 
 - `/raid` - Consulter l'état d'avancement des 100 paliers du raid principal
 - `/raid-history` - Voir l'historique des raids spéciaux vaincus et les buffs actifs
 - `/help` - Afficher l'aide et les tutoriels du bot
+- `/shop` - Accéder à la boutique d'items et de skins
+- `/equip` - Équiper des objets ou des skins à un champion
 
 ## Installation
 *Instructions d'installation à venir*
