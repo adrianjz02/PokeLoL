@@ -1,0 +1,27 @@
+{
+  "name": "pokelol",
+  "version": "1.0.0",
+  "description": "PokeLoL est un bot Discord qui combine l'univers de League of Legends avec les mécaniques de Pokémon. Les joueurs collectionnent des champions LoL (PokéLoL), les améliorent grâce à un système de doublons et d'expérience, et collaborent pour progresser à travers 100 paliers de raid. Avec des combats contre des monstres de jungle, un système de crafting élaboré et des quêtes quotidiennes, PokeLoL offre une expérience PvE collaborative et évolutive où l'ensemble du serveur travaille vers un objectif commun.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adrianjz02/PokeLoL.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/adrianjz02/PokeLoL/issues"
+  },
+  "homepage": "https://github.com/adrianjz02/PokeLoL#readme",
+  "dependencies": {
+    "@discordjs/builders": "^1.10.1",
+    "@discordjs/rest": "^2.4.3",
+    "discord.js": "^14.18.0",
+    "dotenv": "^16.4.7"
+  }
+}
