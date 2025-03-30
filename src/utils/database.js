@@ -61,6 +61,7 @@ function initializeDatabase() {
                 createdAt TEXT NOT NULL,
                 gold INTEGER DEFAULT 500,
                 lastDaily TEXT DEFAULT NULL,
+                lastWeekly TEXT DEFAULT NULL,
                 lastLoldle TEXT DEFAULT NULL,
                 lastQuiz TEXT DEFAULT NULL,
                 raids_completed INTEGER DEFAULT 0,
@@ -79,8 +80,23 @@ function initializeDatabase() {
                 nextLevelExp INTEGER DEFAULT 100,
                 isFavorite INTEGER DEFAULT 0,
                 dateAcquired TEXT NOT NULL,
+                duplicates INTEGER DEFAULT 0,
                 FOREIGN KEY (userId) REFERENCES users (userId) ON DELETE CASCADE,
                 UNIQUE(userId, championId)
+            )
+        `).run();
+        
+        // Créer la table d'inventaire
+        db.prepare(`
+            CREATE TABLE IF NOT EXISTS inventory (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                userId TEXT NOT NULL,
+                itemType TEXT NOT NULL,
+                itemId TEXT NOT NULL,
+                quantity INTEGER DEFAULT 1,
+                dateAcquired TEXT NOT NULL,
+                FOREIGN KEY (userId) REFERENCES users (userId) ON DELETE CASCADE,
+                UNIQUE(userId, itemType, itemId)
             )
         `).run();
         
@@ -326,6 +342,272 @@ function addRewards(userId, rewards) {
     // vous pourriez l'ajouter ici
 }
 
+/**
+ * Vérifie si un utilisateur a déjà récupéré ses récompenses aujourd'hui
+ * @param {String} userId - ID Discord de l'utilisateur
+ * @param {String} rewardType - Type de récompense ('daily' ou 'weekly')
+ * @returns {Boolean} - true si l'utilisateur a déjà récupéré ses récompenses dans la période
+ */
+function hasClaimedRewards(userId, rewardType) {
+    // Vérifier que la connexion est ouverte
+    if (!db || !db.open) {
+        if (!openConnection()) {
+            throw new Error("La connexion à la base de données n'est pas disponible");
+        }
+    }
+    
+    const today = new Date().toISOString().split('T')[0];
+    const field = rewardType === 'daily' ? 'lastDaily' : 'lastWeekly';
+    
+    // Vérifier d'abord si la colonne lastWeekly existe
+    if (rewardType === 'weekly') {
+        try {
+            // Vérifier si la colonne existe dans la table users
+            const columns = db.prepare("PRAGMA table_info(users)").all();
+            const columnExists = columns.some(column => column.name === 'lastWeekly');
+            
+            if (!columnExists) {
+                // Ajouter la colonne si elle n'existe pas
+                db.prepare("ALTER TABLE users ADD COLUMN lastWeekly TEXT DEFAULT NULL").run();
+                console.log("Colonne lastWeekly ajoutée à la table users");
+                return false; // L'utilisateur n'a pas encore récupéré les récompenses
+            }
+        } catch (error) {
+            console.error("Erreur lors de la vérification/ajout de la colonne lastWeekly:", error);
+            return false;
+        }
+    }
+    
+    const user = db.prepare(`SELECT ${field} FROM users WHERE userId = ?`).get(userId);
+    
+    if (!user || !user[field]) {
+        return false;
+    }
+    
+    // Pour les récompenses quotidiennes: vérifier si la dernière récupération était aujourd'hui
+    if (rewardType === 'daily') {
+        return user[field] === today;
+    }
+    
+    // Pour les récompenses hebdomadaires: vérifier si la dernière récupération était cette semaine
+    if (rewardType === 'weekly') {
+        // Récupérer la date de dernière réclamation
+        const lastClaimedDateStr = user[field];
+        
+        // Obtenir la date actuelle sans l'heure
+        const currentDate = new Date();
+        const currentDateStr = currentDate.toISOString().split('T')[0];
+        
+        // Calculer le début de la semaine actuelle (lundi)
+        const currentDay = currentDate.getDay(); // 0 = dimanche, 1 = lundi, ..., 6 = samedi
+        const daysFromMonday = currentDay === 0 ? 6 : currentDay - 1;
+        
+        // Créer une date pour le lundi de cette semaine
+        const mondayDate = new Date(currentDate);
+        mondayDate.setDate(currentDate.getDate() - daysFromMonday);
+        const mondayDateStr = mondayDate.toISOString().split('T')[0];
+        
+        console.log(`Weekly check - User: ${userId}`);
+        console.log(`Last claimed: ${lastClaimedDateStr}`);
+        console.log(`Current date: ${currentDateStr}`);
+        console.log(`Monday of this week: ${mondayDateStr}`);
+        
+        // Vérifier si la dernière réclamation est après ou égale au lundi de cette semaine
+        return lastClaimedDateStr >= mondayDateStr;
+    }
+    
+    return false;
+}
+
+/**
+ * Marque un utilisateur comme ayant récupéré ses récompenses
+ * @param {String} userId - ID Discord de l'utilisateur
+ * @param {String} rewardType - Type de récompense ('daily' ou 'weekly')
+ */
+function markRewardsClaimed(userId, rewardType) {
+    // Vérifier que la connexion est ouverte
+    if (!db || !db.open) {
+        if (!openConnection()) {
+            throw new Error("La connexion à la base de données n'est pas disponible");
+        }
+    }
+    
+    const today = new Date().toISOString().split('T')[0];
+    const field = rewardType === 'daily' ? 'lastDaily' : 'lastWeekly';
+    
+    db.prepare(`UPDATE users SET ${field} = ? WHERE userId = ?`).run(today, userId);
+}
+
+/**
+ * Ajoute un objet à l'inventaire de l'utilisateur
+ * @param {String} userId - ID Discord de l'utilisateur
+ * @param {String} itemType - Type d'objet ('capsule', 'bonbon', etc.)
+ * @param {String} itemId - ID de l'objet ('capsule_invocation', 'bonbon_xp', etc.)
+ * @param {Number} quantity - Quantité à ajouter
+ * @returns {Boolean} - true si l'ajout a réussi
+ */
+function addItemToInventory(userId, itemType, itemId, quantity = 1) {
+    // Vérifier que la connexion est ouverte
+    if (!db || !db.open) {
+        if (!openConnection()) {
+            throw new Error("La connexion à la base de données n'est pas disponible");
+        }
+    }
+    
+    try {
+        const now = new Date().toISOString();
+        
+        // Vérifier si l'objet existe déjà dans l'inventaire
+        const existingItem = db.prepare(
+            'SELECT * FROM inventory WHERE userId = ? AND itemType = ? AND itemId = ?'
+        ).get(userId, itemType, itemId);
+        
+        if (existingItem) {
+            // Mettre à jour la quantité
+            db.prepare(
+                'UPDATE inventory SET quantity = quantity + ? WHERE id = ?'
+            ).run(quantity, existingItem.id);
+        } else {
+            // Ajouter un nouvel objet
+            db.prepare(`
+                INSERT INTO inventory (userId, itemType, itemId, quantity, dateAcquired)
+                VALUES (?, ?, ?, ?, ?)
+            `).run(userId, itemType, itemId, quantity, now);
+        }
+        
+        return true;
+    } catch (error) {
+        console.error("Erreur lors de l'ajout d'un objet à l'inventaire:", error);
+        return false;
+    }
+}
+
+/**
+ * Récupère tous les objets de l'inventaire d'un utilisateur
+ * @param {String} userId - ID Discord de l'utilisateur
+ * @param {String} [itemType] - Type d'objet optionnel pour filtrer les résultats
+ * @returns {Array} - Liste des objets de l'inventaire
+ */
+function getUserInventory(userId, itemType = null) {
+    // Vérifier que la connexion est ouverte
+    if (!db || !db.open) {
+        if (!openConnection()) {
+            throw new Error("La connexion à la base de données n'est pas disponible");
+        }
+    }
+    
+    if (itemType) {
+        return db.prepare(
+            'SELECT * FROM inventory WHERE userId = ? AND itemType = ? ORDER BY dateAcquired DESC'
+        ).all(userId, itemType);
+    } else {
+        return db.prepare(
+            'SELECT * FROM inventory WHERE userId = ? ORDER BY itemType, dateAcquired DESC'
+        ).all(userId);
+    }
+}
+
+/**
+ * Vérifie si un champion existe déjà dans la collection de l'utilisateur
+ * @param {String} userId - ID Discord de l'utilisateur
+ * @param {String} championId - ID du champion à vérifier
+ * @returns {Object|null} - Données du champion s'il existe, sinon null
+ */
+function getUserChampion(userId, championId) {
+    // Vérifier que la connexion est ouverte
+    if (!db || !db.open) {
+        if (!openConnection()) {
+            throw new Error("La connexion à la base de données n'est pas disponible");
+        }
+    }
+    
+    return db.prepare('SELECT * FROM user_champions WHERE userId = ? AND championId = ?').get(userId, championId);
+}
+
+/**
+ * Ajoute un doublon à un champion existant
+ * @param {String} userId - ID Discord de l'utilisateur
+ * @param {String} championId - ID du champion à mettre à jour
+ * @returns {Object|null} - Données du champion après mise à jour
+ */
+function addChampionDuplicate(userId, championId) {
+    // Vérifier que la connexion est ouverte
+    if (!db || !db.open) {
+        if (!openConnection()) {
+            throw new Error("La connexion à la base de données n'est pas disponible");
+        }
+    }
+    
+    try {
+        const champion = getUserChampion(userId, championId);
+        
+        if (!champion) {
+            return null;
+        }
+        
+        // Vérifier si le champion a déjà atteint le maximum de doublons (10)
+        if (champion.duplicates >= 10) {
+            // Ajouter des Riot Points à l'utilisateur au lieu d'ajouter un doublon
+            // Cette fonctionnalité sera implémentée plus tard
+            return champion;
+        }
+        
+        // Mettre à jour le nombre de doublons
+        db.prepare(`
+            UPDATE user_champions 
+            SET duplicates = duplicates + 1 
+            WHERE userId = ? AND championId = ?
+        `).run(userId, championId);
+        
+        return getUserChampion(userId, championId);
+    } catch (error) {
+        console.error("Erreur lors de l'ajout d'un doublon:", error);
+        return null;
+    }
+}
+
+/**
+ * Utilise un objet de l'inventaire (réduit sa quantité)
+ * @param {String} userId - ID Discord de l'utilisateur
+ * @param {String} itemType - Type d'objet
+ * @param {String} itemId - ID de l'objet
+ * @param {Number} quantity - Quantité à utiliser
+ * @returns {Boolean} - true si l'utilisation a réussi
+ */
+function useInventoryItem(userId, itemType, itemId, quantity = 1) {
+    // Vérifier que la connexion est ouverte
+    if (!db || !db.open) {
+        if (!openConnection()) {
+            throw new Error("La connexion à la base de données n'est pas disponible");
+        }
+    }
+    
+    try {
+        const item = db.prepare(
+            'SELECT * FROM inventory WHERE userId = ? AND itemType = ? AND itemId = ?'
+        ).get(userId, itemType, itemId);
+        
+        if (!item || item.quantity < quantity) {
+            return false;
+        }
+        
+        if (item.quantity === quantity) {
+            // Supprimer l'objet s'il ne reste plus rien
+            db.prepare('DELETE FROM inventory WHERE id = ?').run(item.id);
+        } else {
+            // Réduire la quantité
+            db.prepare(
+                'UPDATE inventory SET quantity = quantity - ? WHERE id = ?'
+            ).run(quantity, item.id);
+        }
+        
+        return true;
+    } catch (error) {
+        console.error("Erreur lors de l'utilisation d'un objet:", error);
+        return false;
+    }
+}
+
 // Exportation des fonctions
 module.exports = {
     db,
@@ -336,8 +618,15 @@ module.exports = {
     hasUserChampion,
     addChampionToUser,
     getUserChampions,
+    getUserChampion,
+    addChampionDuplicate,
     hasPlayedToday,
     markUserPlayed,
     getDailyChampion,
-    addRewards
+    addRewards,
+    hasClaimedRewards,
+    markRewardsClaimed,
+    addItemToInventory,
+    getUserInventory,
+    useInventoryItem
 };

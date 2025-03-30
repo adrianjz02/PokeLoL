@@ -32,19 +32,19 @@ Le but ultime du jeu est de progresser collectivement à travers 100 paliers de 
 
 ### Système d'acquisition de champions
 - **Capsule d'Invocation** : Système quotidien de base permettant d'obtenir des PokeLoL
-  - Accessible gratuitement une fois par jour via la commande `/capsule`
-  - Contient entre 3 et 5 champions aléatoires que le joueur acquiert automatiquement
+  - Accessible gratuitement une fois par jour via la commande `/daily`
+  - Contient 5 champions aléatoires que le joueur acquiert automatiquement `/capsule`
   - Tous les champions ont la même rareté de base
 
 - **Hextech Craft** : Système d'acquisition intermédiaire nécessitant des matériaux collectés en jeu
   - Accessible via la commande `/hextech` (coûte des ressources spécifiques)
-  - Contient entre 8 et 10 champions aléatoires que le joueur acquiert automatiquement
+  - Contient 10 champions aléatoires que le joueur acquiert automatiquement
   - Requiert des matériaux comme "Sang de Gromp", "Patte de Carapateur", "Langue de Loup" et un objet de monstre Épique
   - L'objet crafté est stocké dans l'inventaire jusqu'à ce que le joueur décide de l'utiliser
 
 - **Forge Légendaire** : Système d'acquisition premium nécessitant des ressources rares
   - Accessible via la commande `/forge` (coûte une ressource légendaire)
-  - Contient entre 13 et 15 champions aléatoires que le joueur acquiert automatiquement
+  - Contient 15 champions aléatoires que le joueur acquiert automatiquement
   - Requiert un "Cœur de PokeLoL Légendaire" obtenu uniquement des raids spéciaux (PokeBaron, PokeDrake, PokeAtakhan)
   - L'objet crafté est stocké dans l'inventaire jusqu'à ce que le joueur décide de l'utiliser
 
