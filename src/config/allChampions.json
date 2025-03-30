@@ -6,6 +6,15 @@
     "region": "Shurima",
     "element": "combat",
     "role": "fighter",
+    "gender": "male",
+    "species": "god-warrior",
+    "attackRange": "melee",
+    "releaseYear": 2013,
+    "resource": "puits de sang",
+    "positions": [
+      "top",
+      "jungle"
+    ],
     "stats": {
       "hp": 505,
       "mana": 210,
@@ -152,6 +161,14 @@
     "region": "Runeterra",
     "element": "psy",
     "role": "mage",
+    "gender": "female",
+    "species": "vastaya",
+    "attackRange": "ranged",
+    "releaseYear": 2011,
+    "resource": "Mana",
+    "positions": [
+      "mid"
+    ],
     "stats": {
       "hp": 413,
       "mana": 393,
@@ -340,6 +357,15 @@
     "region": "Ionia",
     "element": "ténèbres",
     "role": "assassin",
+    "gender": "female",
+    "species": "human",
+    "attackRange": "melee",
+    "releaseYear": 2010,
+    "resource": "Energy",
+    "positions": [
+      "mid",
+      "jungle"
+    ],
     "stats": {
       "hp": 420,
       "mana": 140,
@@ -534,6 +560,14 @@
     "region": "Runeterra",
     "element": "normal",
     "role": "marksman",
+    "gender": "male",
+    "species": "human",
+    "attackRange": "ranged",
+    "releaseYear": 2021,
+    "resource": "Mana",
+    "positions": [
+      "bot"
+    ],
     "stats": {
       "hp": 441,
       "mana": 245,
@@ -626,6 +660,15 @@
     "region": "Runeterra",
     "element": "roche",
     "role": "tank",
+    "gender": "male",
+    "species": "minotaur",
+    "attackRange": "melee",
+    "releaseYear": 2009,
+    "resource": "Mana",
+    "positions": [
+      "top",
+      "support"
+    ],
     "stats": {
       "hp": 579,
       "mana": 295,
@@ -784,6 +827,15 @@
     "region": "Runeterra",
     "element": "combat",
     "role": "fighter",
+    "gender": "unknown",
+    "species": "unknown",
+    "attackRange": "melee",
+    "releaseYear": 2025,
+    "resource": "Energy",
+    "positions": [
+      "top",
+      "jungle"
+    ],
     "stats": {
       "hp": 491,
       "mana": 140,
@@ -864,6 +916,15 @@
     "region": "Shurima",
     "element": "roche",
     "role": "tank",
+    "gender": "male",
+    "species": "unknown",
+    "attackRange": "melee",
+    "releaseYear": 2009,
+    "resource": "Mana",
+    "positions": [
+      "top",
+      "support"
+    ],
     "stats": {
       "hp": 579,
       "mana": 250,
@@ -1022,6 +1083,14 @@
     "region": "Freljord",
     "element": "psy",
     "role": "mage",
+    "gender": "female",
+    "species": "unknown",
+    "attackRange": "ranged",
+    "releaseYear": 2009,
+    "resource": "Mana",
+    "positions": [
+      "mid"
+    ],
     "stats": {
       "hp": 385,
       "mana": 447,
@@ -1168,6 +1237,14 @@
     "region": "Noxus",
     "element": "psy",
     "role": "mage",
+    "gender": "female",
+    "species": "human",
+    "attackRange": "ranged",
+    "releaseYear": 2009,
+    "resource": "Mana",
+    "positions": [
+      "mid"
+    ],
     "stats": {
       "hp": 392,
       "mana": 393,
@@ -1344,6 +1421,14 @@
     "region": "Void",
     "element": "normal",
     "role": "marksman",
+    "gender": "male",
+    "species": "human",
+    "attackRange": "ranged",
+    "releaseYear": 2019,
+    "resource": "Mana",
+    "positions": [
+      "bot"
+    ],
     "stats": {
       "hp": 420,
       "mana": 244,
@@ -1451,6 +1536,14 @@
     "region": "Freljord",
     "element": "normal",
     "role": "marksman",
+    "gender": "female",
+    "species": "unknown",
+    "attackRange": "ranged",
+    "releaseYear": 2009,
+    "resource": "Mana",
+    "positions": [
+      "bot"
+    ],
     "stats": {
       "hp": 427,
       "mana": 196,
@@ -1633,6 +1726,14 @@
     "region": "Void",
     "element": "psy",
     "role": "mage",
+    "gender": "male",
+    "species": "celestial",
+    "attackRange": "ranged",
+    "releaseYear": 2016,
+    "resource": "Mana",
+    "positions": [
+      "mid"
+    ],
     "stats": {
       "hp": 420,
       "mana": 471,
@@ -1737,6 +1838,14 @@
     "region": "Freljord",
     "element": "psy",
     "role": "mage",
+    "gender": "unknown",
+    "species": "unknown",
+    "attackRange": "melee",
+    "releaseYear": 2025,
+    "resource": "Mana",
+    "positions": [
+      "mid"
+    ],
     "stats": {
       "hp": 425,
       "mana": 433,
@@ -1817,6 +1926,14 @@
     "region": "Shurima",
     "element": "psy",
     "role": "mage",
+    "gender": "male",
+    "species": "god-warrior",
+    "attackRange": "ranged",
+    "releaseYear": 2014,
+    "resource": "Mana",
+    "positions": [
+      "mid"
+    ],
     "stats": {
       "hp": 385,
       "mana": 324,
@@ -1933,6 +2050,14 @@
     "region": "Runeterra",
     "element": "fée",
     "role": "support",
+    "gender": "male",
+    "species": "celestial",
+    "attackRange": "ranged",
+    "releaseYear": 2015,
+    "resource": "Mana",
+    "positions": [
+      "support"
+    ],
     "stats": {
       "hp": 441,
       "mana": 295,
@@ -2049,6 +2174,15 @@
     "region": "Void",
     "element": "combat",
     "role": "fighter",
+    "gender": "female",
+    "species": "void",
+    "attackRange": "melee",
+    "releaseYear": 2022,
+    "resource": "None",
+    "positions": [
+      "top",
+      "jungle"
+    ],
     "stats": {
       "hp": 477,
       "mana": 42,
@@ -2141,6 +2275,15 @@
     "region": "Zaun",
     "element": "roche",
     "role": "tank",
+    "gender": "male",
+    "species": "golem",
+    "attackRange": "melee",
+    "releaseYear": 2009,
+    "resource": "Mana",
+    "positions": [
+      "top",
+      "support"
+    ],
     "stats": {
       "hp": 520,
       "mana": 237,
@@ -2305,6 +2448,14 @@
     "region": "Freljord",
     "element": "psy",
     "role": "mage",
+    "gender": "male",
+    "species": "revenant",
+    "attackRange": "ranged",
+    "releaseYear": 2011,
+    "resource": "Mana",
+    "positions": [
+      "mid"
+    ],
     "stats": {
       "hp": 399,
       "mana": 428,
@@ -2451,6 +2602,15 @@
     "region": "Freljord",
     "element": "roche",
     "role": "tank",
+    "gender": "male",
+    "species": "human",
+    "attackRange": "melee",
+    "releaseYear": 2014,
+    "resource": "Mana",
+    "positions": [
+      "top",
+      "support"
+    ],
     "stats": {
       "hp": 527,
       "mana": 268,
@@ -2567,6 +2727,15 @@
     "region": "Runeterra",
     "element": "combat",
     "role": "fighter",
+    "gender": "female",
+    "species": "unknown",
+    "attackRange": "melee",
+    "releaseYear": 2023,
+    "resource": "fureur",
+    "positions": [
+      "top",
+      "jungle"
+    ],
     "stats": {
       "hp": 488,
       "mana": 210,
@@ -2653,6 +2822,14 @@
     "region": "Piltover",
     "element": "normal",
     "role": "marksman",
+    "gender": "female",
+    "species": "human",
+    "attackRange": "ranged",
+    "releaseYear": 2011,
+    "resource": "Mana",
+    "positions": [
+      "bot"
+    ],
     "stats": {
       "hp": 406,
       "mana": 221,
@@ -2841,6 +3018,15 @@
     "region": "Piltover",
     "element": "combat",
     "role": "fighter",
+    "gender": "female",
+    "species": "human",
+    "attackRange": "melee",
+    "releaseYear": 2016,
+    "resource": "Mana",
+    "positions": [
+      "top",
+      "jungle"
+    ],
     "stats": {
       "hp": 505,
       "mana": 237,
@@ -2957,6 +3143,14 @@
     "region": "Shurima",
     "element": "psy",
     "role": "mage",
+    "gender": "female",
+    "species": "unknown",
+    "attackRange": "ranged",
+    "releaseYear": 2010,
+    "resource": "Mana",
+    "positions": [
+      "mid"
+    ],
     "stats": {
       "hp": 441,
       "mana": 380,
@@ -3085,6 +3279,15 @@
     "region": "Void",
     "element": "roche",
     "role": "tank",
+    "gender": "male",
+    "species": "void",
+    "attackRange": "melee",
+    "releaseYear": 2009,
+    "resource": "Mana",
+    "positions": [
+      "top",
+      "support"
+    ],
     "stats": {
       "hp": 551,
       "mana": 239,
@@ -3219,6 +3422,14 @@
     "region": "Piltover",
     "element": "normal",
     "role": "marksman",
+    "gender": "male",
+    "species": "yordle",
+    "attackRange": "ranged",
+    "releaseYear": 2009,
+    "resource": "Mana",
+    "positions": [
+      "bot"
+    ],
     "stats": {
       "hp": 427,
       "mana": 245,
@@ -3353,6 +3564,15 @@
     "region": "Noxus",
     "element": "combat",
     "role": "fighter",
+    "gender": "male",
+    "species": "human",
+    "attackRange": "melee",
+    "releaseYear": 2012,
+    "resource": "Mana",
+    "positions": [
+      "top",
+      "jungle"
+    ],
     "stats": {
       "hp": 506,
       "mana": 184,
@@ -3511,6 +3731,15 @@
     "region": "Targon",
     "element": "combat",
     "role": "fighter",
+    "gender": "female",
+    "species": "human",
+    "attackRange": "melee",
+    "releaseYear": 2012,
+    "resource": "Mana",
+    "positions": [
+      "top",
+      "jungle"
+    ],
     "stats": {
       "hp": 498,
       "mana": 263,
@@ -3669,6 +3898,14 @@
     "region": "Noxus",
     "element": "normal",
     "role": "marksman",
+    "gender": "male",
+    "species": "human",
+    "attackRange": "ranged",
+    "releaseYear": 2012,
+    "resource": "Mana",
+    "positions": [
+      "bot"
+    ],
     "stats": {
       "hp": 472,
       "mana": 253,
@@ -3821,6 +4058,15 @@
     "region": "Zaun",
     "element": "roche",
     "role": "tank",
+    "gender": "male",
+    "species": "chemically-altered",
+    "attackRange": "melee",
+    "releaseYear": 2009,
+    "resource": "aucune",
+    "positions": [
+      "top",
+      "support"
+    ],
     "stats": {
       "hp": 548,
       "mana": 260,
@@ -3961,6 +4207,15 @@
     "region": "Zaun",
     "element": "ténèbres",
     "role": "assassin",
+    "gender": "male",
+    "species": "human",
+    "attackRange": "melee",
+    "releaseYear": 2015,
+    "resource": "Mana",
+    "positions": [
+      "mid",
+      "jungle"
+    ],
     "stats": {
       "hp": 458,
       "mana": 196,
@@ -4107,6 +4362,15 @@
     "region": "Noxus",
     "element": "ténèbres",
     "role": "assassin",
+    "gender": "female",
+    "species": "animal",
+    "attackRange": "ranged",
+    "releaseYear": 2012,
+    "resource": "Mana",
+    "positions": [
+      "mid",
+      "jungle"
+    ],
     "stats": {
       "hp": 434,
       "mana": 227,
@@ -4235,6 +4499,15 @@
     "region": "Runeterra",
     "element": "ténèbres",
     "role": "assassin",
+    "gender": "female",
+    "species": "demon",
+    "attackRange": "melee",
+    "releaseYear": 2009,
+    "resource": "Mana",
+    "positions": [
+      "mid",
+      "jungle"
+    ],
     "stats": {
       "hp": 449,
       "mana": 221,
@@ -4399,6 +4672,14 @@
     "region": "Runeterra",
     "element": "normal",
     "role": "marksman",
+    "gender": "male",
+    "species": "human",
+    "attackRange": "ranged",
+    "releaseYear": 2010,
+    "resource": "Mana",
+    "positions": [
+      "bot"
+    ],
     "stats": {
       "hp": 420,
       "mana": 263,
@@ -4599,6 +4880,14 @@
     "region": "Runeterra",
     "element": "psy",
     "role": "mage",
+    "gender": "male",
+    "species": "demon",
+    "attackRange": "ranged",
+    "releaseYear": 2009,
+    "resource": "Mana",
+    "positions": [
+      "mid"
+    ],
     "stats": {
       "hp": 455,
       "mana": 450,
@@ -4739,6 +5028,15 @@
     "region": "Demacia",
     "element": "combat",
     "role": "fighter",
+    "gender": "female",
+    "species": "human",
+    "attackRange": "melee",
+    "releaseYear": 2012,
+    "resource": "Mana",
+    "positions": [
+      "top",
+      "jungle"
+    ],
     "stats": {
       "hp": 484,
       "mana": 210,
@@ -4903,6 +5201,15 @@
     "region": "Bilgewater",
     "element": "ténèbres",
     "role": "assassin",
+    "gender": "male",
+    "species": "unknown",
+    "attackRange": "melee",
+    "releaseYear": 2011,
+    "resource": "Mana",
+    "positions": [
+      "mid",
+      "jungle"
+    ],
     "stats": {
       "hp": 448,
       "mana": 222,
@@ -5055,6 +5362,15 @@
     "region": "Demacia",
     "element": "roche",
     "role": "tank",
+    "gender": "male",
+    "species": "golem",
+    "attackRange": "melee",
+    "releaseYear": 2010,
+    "resource": "Mana",
+    "positions": [
+      "top",
+      "support"
+    ],
     "stats": {
       "hp": 520,
       "mana": 337,
@@ -5183,6 +5499,15 @@
     "region": "Bilgewater",
     "element": "combat",
     "role": "fighter",
+    "gender": "male",
+    "species": "human",
+    "attackRange": "melee",
+    "releaseYear": 2009,
+    "resource": "Mana",
+    "positions": [
+      "top",
+      "jungle"
+    ],
     "stats": {
       "hp": 491,
       "mana": 196,
@@ -5329,6 +5654,15 @@
     "region": "Demacia",
     "element": "combat",
     "role": "fighter",
+    "gender": "male",
+    "species": "human",
+    "attackRange": "melee",
+    "releaseYear": 2010,
+    "resource": "aucune",
+    "positions": [
+      "top",
+      "jungle"
+    ],
     "stats": {
       "hp": 533,
       "mana": 210,
@@ -5493,6 +5827,15 @@
     "region": "Bandle City",
     "element": "combat",
     "role": "fighter",
+    "gender": "unknown",
+    "species": "unknown",
+    "attackRange": "melee",
+    "releaseYear": 2014,
+    "resource": "Rage",
+    "positions": [
+      "top",
+      "jungle"
+    ],
     "stats": {
       "hp": 428,
       "mana": 70,
@@ -5621,6 +5964,15 @@
     "region": "Freljord",
     "element": "combat",
     "role": "fighter",
+    "gender": "male",
+    "species": "unknown",
+    "attackRange": "melee",
+    "releaseYear": 2010,
+    "resource": "Mana",
+    "positions": [
+      "top",
+      "jungle"
+    ],
     "stats": {
       "hp": 498,
       "mana": 280,
@@ -5779,6 +6131,14 @@
     "region": "Bilgewater",
     "element": "normal",
     "role": "marksman",
+    "gender": "male",
+    "species": "human",
+    "attackRange": "ranged",
+    "releaseYear": 2011,
+    "resource": "Mana",
+    "positions": [
+      "bot"
+    ],
     "stats": {
       "hp": 438,
       "mana": 227,
@@ -5931,6 +6291,15 @@
     "region": "Runeterra",
     "element": "combat",
     "role": "fighter",
+    "gender": "female",
+    "species": "human",
+    "attackRange": "melee",
+    "releaseYear": 2021,
+    "resource": "Mana",
+    "positions": [
+      "top",
+      "jungle"
+    ],
     "stats": {
       "hp": 505,
       "mana": 231,
@@ -6029,6 +6398,15 @@
     "region": "Void",
     "element": "combat",
     "role": "fighter",
+    "gender": "male",
+    "species": "undead",
+    "attackRange": "melee",
+    "releaseYear": 2012,
+    "resource": "Mana",
+    "positions": [
+      "top",
+      "jungle"
+    ],
     "stats": {
       "hp": 488,
       "mana": 196,
@@ -6169,6 +6547,14 @@
     "region": "Piltover",
     "element": "psy",
     "role": "mage",
+    "gender": "male",
+    "species": "yordle",
+    "attackRange": "ranged",
+    "releaseYear": 2009,
+    "resource": "Mana",
+    "positions": [
+      "mid"
+    ],
     "stats": {
       "hp": 391,
       "mana": 370,
@@ -6297,6 +6683,14 @@
     "region": "Ionia",
     "element": "psy",
     "role": "mage",
+    "gender": "male",
+    "species": "human",
+    "attackRange": "ranged",
+    "releaseYear": 2023,
+    "resource": "Mana",
+    "positions": [
+      "mid"
+    ],
     "stats": {
       "hp": 406,
       "mana": 436,
@@ -6377,6 +6771,15 @@
     "region": "Runeterra",
     "element": "combat",
     "role": "fighter",
+    "gender": "female",
+    "species": "unknown",
+    "attackRange": "melee",
+    "releaseYear": 2015,
+    "resource": "Mana",
+    "positions": [
+      "top",
+      "jungle"
+    ],
     "stats": {
       "hp": 509,
       "mana": 245,
@@ -6481,6 +6884,15 @@
     "region": "Runeterra",
     "element": "combat",
     "role": "fighter",
+    "gender": "female",
+    "species": "human",
+    "attackRange": "melee",
+    "releaseYear": 2010,
+    "resource": "Mana",
+    "positions": [
+      "top",
+      "jungle"
+    ],
     "stats": {
       "hp": 491,
       "mana": 245,
@@ -6639,6 +7051,14 @@
     "region": "Runeterra",
     "element": "fée",
     "role": "support",
+    "gender": "male",
+    "species": "spirit",
+    "attackRange": "melee",
+    "releaseYear": 2016,
+    "resource": "Mana",
+    "positions": [
+      "support"
+    ],
     "stats": {
       "hp": 441,
       "mana": 365,
@@ -6737,6 +7157,14 @@
     "region": "Zaun",
     "element": "fée",
     "role": "support",
+    "gender": "female",
+    "species": "spirit",
+    "attackRange": "melee",
+    "releaseYear": 2009,
+    "resource": "Mana",
+    "positions": [
+      "support"
+    ],
     "stats": {
       "hp": 399,
       "mana": 302,
@@ -6901,6 +7329,15 @@
     "region": "Demacia",
     "element": "combat",
     "role": "fighter",
+    "gender": "male",
+    "species": "human",
+    "attackRange": "melee",
+    "releaseYear": 2011,
+    "resource": "Mana",
+    "positions": [
+      "top",
+      "jungle"
+    ],
     "stats": {
       "hp": 498,
       "mana": 210,
@@ -7059,6 +7496,15 @@
     "region": "Void",
     "element": "combat",
     "role": "fighter",
+    "gender": "male",
+    "species": "unknown",
+    "attackRange": "melee",
+    "releaseYear": 2009,
+    "resource": "Mana",
+    "positions": [
+      "top",
+      "jungle"
+    ],
     "stats": {
       "hp": 515,
       "mana": 237,
@@ -7229,6 +7675,14 @@
     "region": "Piltover",
     "element": "normal",
     "role": "marksman",
+    "gender": "male",
+    "species": "human",
+    "attackRange": "ranged",
+    "releaseYear": 2012,
+    "resource": "Mana",
+    "positions": [
+      "bot"
+    ],
     "stats": {
       "hp": 413,
       "mana": 263,
@@ -7372,6 +7826,14 @@
     "region": "Ionia",
     "element": "normal",
     "role": "marksman",
+    "gender": "male",
+    "species": "human",
+    "attackRange": "ranged",
+    "releaseYear": 2016,
+    "resource": "Mana",
+    "positions": [
+      "bot"
+    ],
     "stats": {
       "hp": 458,
       "mana": 210,
@@ -7512,6 +7974,14 @@
     "region": "Piltover",
     "element": "normal",
     "role": "marksman",
+    "gender": "female",
+    "species": "human",
+    "attackRange": "ranged",
+    "releaseYear": 2013,
+    "resource": "Mana",
+    "positions": [
+      "bot"
+    ],
     "stats": {
       "hp": 441,
       "mana": 182,
@@ -7670,6 +8140,14 @@
     "region": "Void",
     "element": "normal",
     "role": "marksman",
+    "gender": "female",
+    "species": "human",
+    "attackRange": "ranged",
+    "releaseYear": 2018,
+    "resource": "Mana",
+    "positions": [
+      "bot"
+    ],
     "stats": {
       "hp": 448,
       "mana": 241,
@@ -7822,6 +8300,14 @@
     "region": "Shadow Isles",
     "element": "normal",
     "role": "marksman",
+    "gender": "female",
+    "species": "human",
+    "attackRange": "ranged",
+    "releaseYear": 2014,
+    "resource": "Mana",
+    "positions": [
+      "bot"
+    ],
     "stats": {
       "hp": 420,
       "mana": 210,
@@ -7926,6 +8412,14 @@
     "region": "Ionia",
     "element": "psy",
     "role": "mage",
+    "gender": "female",
+    "species": "human",
+    "attackRange": "ranged",
+    "releaseYear": 2011,
+    "resource": "Mana",
+    "positions": [
+      "mid"
+    ],
     "stats": {
       "hp": 441,
       "mana": 362,
@@ -8084,6 +8578,14 @@
     "region": "Shadow Isles",
     "element": "psy",
     "role": "mage",
+    "gender": "unknown",
+    "species": "undead",
+    "attackRange": "ranged",
+    "releaseYear": 2009,
+    "resource": "Mana",
+    "positions": [
+      "mid"
+    ],
     "stats": {
       "hp": 434,
       "mana": 427,
@@ -8212,6 +8714,15 @@
     "region": "Void",
     "element": "ténèbres",
     "role": "assassin",
+    "gender": "unknown",
+    "species": "void",
+    "attackRange": "melee",
+    "releaseYear": 2009,
+    "resource": "Mana",
+    "positions": [
+      "mid",
+      "jungle"
+    ],
     "stats": {
       "hp": 452,
       "mana": 280,
@@ -8340,6 +8851,15 @@
     "region": "Noxus",
     "element": "ténèbres",
     "role": "assassin",
+    "gender": "female",
+    "species": "human",
+    "attackRange": "melee",
+    "releaseYear": 2009,
+    "resource": "aucune",
+    "positions": [
+      "mid",
+      "jungle"
+    ],
     "stats": {
       "hp": 470,
       "mana": 210,
@@ -8522,6 +9042,14 @@
     "region": "Demacia",
     "element": "psy",
     "role": "mage",
+    "gender": "female",
+    "species": "human",
+    "attackRange": "ranged",
+    "releaseYear": 2009,
+    "resource": "Mana",
+    "positions": [
+      "mid"
+    ],
     "stats": {
       "hp": 469,
       "mana": 331,
@@ -8692,6 +9220,15 @@
     "region": "Ionia",
     "element": "combat",
     "role": "fighter",
+    "gender": "male",
+    "species": "human",
+    "attackRange": "melee",
+    "releaseYear": 2017,
+    "resource": "Mana",
+    "positions": [
+      "top",
+      "jungle"
+    ],
     "stats": {
       "hp": 508,
       "mana": 287,
@@ -8808,6 +9345,14 @@
     "region": "Ionia",
     "element": "psy",
     "role": "mage",
+    "gender": "male",
+    "species": "yordle",
+    "attackRange": "ranged",
+    "releaseYear": 2010,
+    "resource": "Energy",
+    "positions": [
+      "mid"
+    ],
     "stats": {
       "hp": 406,
       "mana": 240,
@@ -8942,6 +9487,15 @@
     "region": "Void",
     "element": "ténèbres",
     "role": "assassin",
+    "gender": "male",
+    "species": "void",
+    "attackRange": "melee",
+    "releaseYear": 2012,
+    "resource": "Mana",
+    "positions": [
+      "mid",
+      "jungle"
+    ],
     "stats": {
       "hp": 450,
       "mana": 229,
@@ -9064,6 +9618,14 @@
     "region": "Runeterra",
     "element": "normal",
     "role": "marksman",
+    "gender": "female",
+    "species": "spirit",
+    "attackRange": "ranged",
+    "releaseYear": 2015,
+    "resource": "Mana",
+    "positions": [
+      "bot"
+    ],
     "stats": {
       "hp": 417,
       "mana": 210,
@@ -9186,6 +9748,15 @@
     "region": "Noxus",
     "element": "combat",
     "role": "fighter",
+    "gender": "male",
+    "species": "yordle",
+    "attackRange": "melee",
+    "releaseYear": 2016,
+    "resource": "Rage",
+    "positions": [
+      "top",
+      "jungle"
+    ],
     "stats": {
       "hp": 337,
       "mana": 70,
@@ -9284,6 +9855,14 @@
     "region": "Void",
     "element": "normal",
     "role": "marksman",
+    "gender": "male",
+    "species": "void",
+    "attackRange": "ranged",
+    "releaseYear": 2010,
+    "resource": "Mana",
+    "positions": [
+      "bot"
+    ],
     "stats": {
       "hp": 445,
       "mana": 227,
@@ -9448,6 +10027,15 @@
     "region": "Shurima",
     "element": "roche",
     "role": "tank",
+    "gender": "male",
+    "species": "human",
+    "attackRange": "melee",
+    "releaseYear": 2022,
+    "resource": "Mana",
+    "positions": [
+      "top",
+      "support"
+    ],
     "stats": {
       "hp": 538,
       "mana": 274,
@@ -9540,6 +10128,15 @@
     "region": "Noxus",
     "element": "ténèbres",
     "role": "assassin",
+    "gender": "female",
+    "species": "human",
+    "attackRange": "ranged",
+    "releaseYear": 2010,
+    "resource": "Mana",
+    "positions": [
+      "mid",
+      "jungle"
+    ],
     "stats": {
       "hp": 419,
       "mana": 280,
@@ -9692,6 +10289,15 @@
     "region": "Ionia",
     "element": "combat",
     "role": "fighter",
+    "gender": "male",
+    "species": "human",
+    "attackRange": "melee",
+    "releaseYear": 2011,
+    "resource": "Energy",
+    "positions": [
+      "top",
+      "jungle"
+    ],
     "stats": {
       "hp": 501,
       "mana": 140,
@@ -9874,6 +10480,15 @@
     "region": "Targon",
     "element": "roche",
     "role": "tank",
+    "gender": "female",
+    "species": "human",
+    "attackRange": "melee",
+    "releaseYear": 2011,
+    "resource": "Mana",
+    "positions": [
+      "top",
+      "support"
+    ],
     "stats": {
       "hp": 552,
       "mana": 261,
@@ -10050,6 +10665,15 @@
     "region": "Ionia",
     "element": "combat",
     "role": "fighter",
+    "gender": "female",
+    "species": "spirit",
+    "attackRange": "melee",
+    "releaseYear": 2020,
+    "resource": "Mana",
+    "positions": [
+      "top",
+      "jungle"
+    ],
     "stats": {
       "hp": 474,
       "mana": 287,
@@ -10148,6 +10772,14 @@
     "region": "Runeterra",
     "element": "psy",
     "role": "mage",
+    "gender": "female",
+    "species": "iceborn",
+    "attackRange": "ranged",
+    "releaseYear": 2013,
+    "resource": "Mana",
+    "positions": [
+      "mid"
+    ],
     "stats": {
       "hp": 434,
       "mana": 433,
@@ -10270,6 +10902,14 @@
     "region": "Runeterra",
     "element": "normal",
     "role": "marksman",
+    "gender": "male",
+    "species": "human",
+    "attackRange": "ranged",
+    "releaseYear": 2013,
+    "resource": "Mana",
+    "positions": [
+      "bot"
+    ],
     "stats": {
       "hp": 449,
       "mana": 224,
@@ -10422,6 +11062,14 @@
     "region": "Bandle City",
     "element": "fée",
     "role": "support",
+    "gender": "female",
+    "species": "yordle",
+    "attackRange": "ranged",
+    "releaseYear": 2012,
+    "resource": "Mana",
+    "positions": [
+      "support"
+    ],
     "stats": {
       "hp": 417,
       "mana": 295,
@@ -10568,6 +11216,14 @@
     "region": "Demacia",
     "element": "psy",
     "role": "mage",
+    "gender": "female",
+    "species": "human",
+    "attackRange": "ranged",
+    "releaseYear": 2010,
+    "resource": "Mana",
+    "positions": [
+      "mid"
+    ],
     "stats": {
       "hp": 406,
       "mana": 436,
@@ -10762,6 +11418,15 @@
     "region": "Runeterra",
     "element": "roche",
     "role": "tank",
+    "gender": "male",
+    "species": "golem",
+    "attackRange": "melee",
+    "releaseYear": 2009,
+    "resource": "Mana",
+    "positions": [
+      "top",
+      "support"
+    ],
     "stats": {
       "hp": 565,
       "mana": 246,
@@ -10914,6 +11579,14 @@
     "region": "Shurima",
     "element": "psy",
     "role": "mage",
+    "gender": "male",
+    "species": "void",
+    "attackRange": "ranged",
+    "releaseYear": 2010,
+    "resource": "Mana",
+    "positions": [
+      "mid"
+    ],
     "stats": {
       "hp": 406,
       "mana": 363,
@@ -11060,6 +11733,15 @@
     "region": "Shadow Isles",
     "element": "roche",
     "role": "tank",
+    "gender": "male",
+    "species": "unknown",
+    "attackRange": "melee",
+    "releaseYear": 2011,
+    "resource": "Mana",
+    "positions": [
+      "top",
+      "support"
+    ],
     "stats": {
       "hp": 565,
       "mana": 313,
@@ -11194,6 +11876,15 @@
     "region": "Ionia",
     "element": "ténèbres",
     "role": "assassin",
+    "gender": "male",
+    "species": "unknown",
+    "attackRange": "melee",
+    "releaseYear": 2009,
+    "resource": "Mana",
+    "positions": [
+      "mid",
+      "jungle"
+    ],
     "stats": {
       "hp": 468,
       "mana": 176,
@@ -11370,6 +12061,14 @@
     "region": "Noxus",
     "element": "psy",
     "role": "mage",
+    "gender": "unknown",
+    "species": "unknown",
+    "attackRange": "melee",
+    "releaseYear": 2025,
+    "resource": "Mana",
+    "positions": [
+      "mid"
+    ],
     "stats": {
       "hp": 420,
       "mana": 436,
@@ -11450,6 +12149,14 @@
     "region": "Ixtal",
     "element": "fée",
     "role": "support",
+    "gender": "male",
+    "species": "human",
+    "attackRange": "ranged",
+    "releaseYear": 2023,
+    "resource": "Mana",
+    "positions": [
+      "support"
+    ],
     "stats": {
       "hp": 392,
       "mana": 305,
@@ -11536,6 +12243,14 @@
     "region": "Bilgewater",
     "element": "normal",
     "role": "marksman",
+    "gender": "female",
+    "species": "human",
+    "attackRange": "ranged",
+    "releaseYear": 2010,
+    "resource": "Mana",
+    "positions": [
+      "bot"
+    ],
     "stats": {
       "hp": 448,
       "mana": 210,
@@ -11742,6 +12457,15 @@
     "region": "Ionia",
     "element": "combat",
     "role": "fighter",
+    "gender": "male",
+    "species": "unknown",
+    "attackRange": "melee",
+    "releaseYear": 2011,
+    "resource": "Mana",
+    "positions": [
+      "top",
+      "jungle"
+    ],
     "stats": {
       "hp": 477,
       "mana": 231,
@@ -11864,6 +12588,15 @@
     "region": "Runeterra",
     "element": "combat",
     "role": "fighter",
+    "gender": "male",
+    "species": "undead",
+    "attackRange": "melee",
+    "releaseYear": 2010,
+    "resource": "Shield",
+    "positions": [
+      "top",
+      "jungle"
+    ],
     "stats": {
       "hp": 501,
       "mana": 70,
@@ -12004,6 +12737,14 @@
     "region": "Demacia",
     "element": "psy",
     "role": "mage",
+    "gender": "female",
+    "species": "human",
+    "attackRange": "ranged",
+    "releaseYear": 2009,
+    "resource": "Mana",
+    "positions": [
+      "mid"
+    ],
     "stats": {
       "hp": 441,
       "mana": 338,
@@ -12168,6 +12909,15 @@
     "region": "Shurima",
     "element": "ténèbres",
     "role": "assassin",
+    "gender": "female",
+    "species": "unknown",
+    "attackRange": "melee",
+    "releaseYear": 2023,
+    "resource": "Mana",
+    "positions": [
+      "mid",
+      "jungle"
+    ],
     "stats": {
       "hp": 445,
       "mana": 280,
@@ -12254,6 +13004,14 @@
     "region": "Targon",
     "element": "fée",
     "role": "support",
+    "gender": "female",
+    "species": "vastaya",
+    "attackRange": "ranged",
+    "releaseYear": 2012,
+    "resource": "Mana",
+    "positions": [
+      "support"
+    ],
     "stats": {
       "hp": 392,
       "mana": 305,
@@ -12406,6 +13164,15 @@
     "region": "Shurima",
     "element": "combat",
     "role": "fighter",
+    "gender": "male",
+    "species": "god-warrior",
+    "attackRange": "melee",
+    "releaseYear": 2009,
+    "resource": "Mana",
+    "positions": [
+      "top",
+      "jungle"
+    ],
     "stats": {
       "hp": 492,
       "mana": 228,
@@ -12552,6 +13319,15 @@
     "region": "Bilgewater",
     "element": "roche",
     "role": "tank",
+    "gender": "male",
+    "species": "unknown",
+    "attackRange": "melee",
+    "releaseYear": 2012,
+    "resource": "Mana",
+    "positions": [
+      "top",
+      "support"
+    ],
     "stats": {
       "hp": 552,
       "mana": 330,
@@ -12686,6 +13462,14 @@
     "region": "Runeterra",
     "element": "psy",
     "role": "mage",
+    "gender": "female",
+    "species": "vastaya",
+    "attackRange": "ranged",
+    "releaseYear": 2018,
+    "resource": "Mana",
+    "positions": [
+      "mid"
+    ],
     "stats": {
       "hp": 427,
       "mana": 415,
@@ -12808,6 +13592,15 @@
     "region": "Runeterra",
     "element": "ténèbres",
     "role": "assassin",
+    "gender": "female",
+    "species": "animal",
+    "attackRange": "ranged",
+    "releaseYear": 2009,
+    "resource": "Mana",
+    "positions": [
+      "mid",
+      "jungle"
+    ],
     "stats": {
       "hp": 427,
       "mana": 207,
@@ -12972,6 +13765,15 @@
     "region": "Runeterra",
     "element": "combat",
     "role": "fighter",
+    "gender": "female",
+    "species": "human",
+    "attackRange": "melee",
+    "releaseYear": 2022,
+    "resource": "Mana",
+    "positions": [
+      "top",
+      "jungle"
+    ],
     "stats": {
       "hp": 449,
       "mana": 245,
@@ -13058,6 +13860,15 @@
     "region": "Runeterra",
     "element": "combat",
     "role": "fighter",
+    "gender": "male",
+    "species": "demon",
+    "attackRange": "melee",
+    "releaseYear": 2011,
+    "resource": "Mana",
+    "positions": [
+      "top",
+      "jungle"
+    ],
     "stats": {
       "hp": 508,
       "mana": 193,
@@ -13192,6 +14003,15 @@
     "region": "Freljord",
     "element": "roche",
     "role": "tank",
+    "gender": "male",
+    "species": "spirit",
+    "attackRange": "melee",
+    "releaseYear": 2009,
+    "resource": "Mana",
+    "positions": [
+      "top",
+      "support"
+    ],
     "stats": {
       "hp": 527,
       "mana": 246,
@@ -13338,6 +14158,15 @@
     "region": "Freljord",
     "element": "combat",
     "role": "fighter",
+    "gender": "male",
+    "species": "human",
+    "attackRange": "melee",
+    "releaseYear": 2010,
+    "resource": "Mana",
+    "positions": [
+      "top",
+      "jungle"
+    ],
     "stats": {
       "hp": 501,
       "mana": 221,
@@ -13478,6 +14307,14 @@
     "region": "Piltover",
     "element": "psy",
     "role": "mage",
+    "gender": "female",
+    "species": "unknown",
+    "attackRange": "ranged",
+    "releaseYear": 2011,
+    "resource": "Mana",
+    "positions": [
+      "mid"
+    ],
     "stats": {
       "hp": 410,
       "mana": 393,
@@ -13624,6 +14461,15 @@
     "region": "Freljord",
     "element": "roche",
     "role": "tank",
+    "gender": "male",
+    "species": "spirit",
+    "attackRange": "melee",
+    "releaseYear": 2017,
+    "resource": "Mana",
+    "positions": [
+      "top",
+      "support"
+    ],
     "stats": {
       "hp": 562,
       "mana": 289,
@@ -13722,6 +14568,15 @@
     "region": "Runeterra",
     "element": "combat",
     "role": "fighter",
+    "gender": "male",
+    "species": "human",
+    "attackRange": "melee",
+    "releaseYear": 2010,
+    "resource": "Mana",
+    "positions": [
+      "top",
+      "jungle"
+    ],
     "stats": {
       "hp": 505,
       "mana": 222,
@@ -13874,6 +14729,15 @@
     "region": "Demacia",
     "element": "roche",
     "role": "tank",
+    "gender": "female",
+    "species": "yordle",
+    "attackRange": "melee",
+    "releaseYear": 2010,
+    "resource": "Mana",
+    "positions": [
+      "top",
+      "support"
+    ],
     "stats": {
       "hp": 527,
       "mana": 246,
@@ -14020,6 +14884,14 @@
     "region": "Bilgewater",
     "element": "fée",
     "role": "support",
+    "gender": "male",
+    "species": "human",
+    "attackRange": "melee",
+    "releaseYear": 2018,
+    "resource": "Mana",
+    "positions": [
+      "support"
+    ],
     "stats": {
       "hp": 469,
       "mana": 341,
@@ -14154,6 +15026,15 @@
     "region": "Runeterra",
     "element": "ténèbres",
     "role": "assassin",
+    "gender": "female",
+    "species": "human",
+    "attackRange": "melee",
+    "releaseYear": 2019,
+    "resource": "Mana",
+    "positions": [
+      "mid",
+      "jungle"
+    ],
     "stats": {
       "hp": 413,
       "mana": 263,
@@ -14282,6 +15163,14 @@
     "region": "Demacia",
     "element": "normal",
     "role": "marksman",
+    "gender": "female",
+    "species": "human",
+    "attackRange": "ranged",
+    "releaseYear": 2013,
+    "resource": "Mana",
+    "positions": [
+      "bot"
+    ],
     "stats": {
       "hp": 396,
       "mana": 188,
@@ -14392,6 +15281,14 @@
     "region": "Ionia",
     "element": "fée",
     "role": "support",
+    "gender": "unknown",
+    "species": "vastaya",
+    "attackRange": "ranged",
+    "releaseYear": 2017,
+    "resource": "Mana",
+    "positions": [
+      "support"
+    ],
     "stats": {
       "hp": 427,
       "mana": 271,
@@ -14538,6 +15435,15 @@
     "region": "Shurima",
     "element": "roche",
     "role": "tank",
+    "gender": "male",
+    "species": "animal",
+    "attackRange": "melee",
+    "releaseYear": 2009,
+    "resource": "Mana",
+    "positions": [
+      "top",
+      "support"
+    ],
     "stats": {
       "hp": 572,
       "mana": 267,
@@ -14678,6 +15584,15 @@
     "region": "Shurima",
     "element": "combat",
     "role": "fighter",
+    "gender": "male",
+    "species": "void",
+    "attackRange": "melee",
+    "releaseYear": 2014,
+    "resource": "Rage",
+    "positions": [
+      "top",
+      "jungle"
+    ],
     "stats": {
       "hp": 470,
       "mana": 70,
@@ -14782,6 +15697,15 @@
     "region": "Noxus",
     "element": "roche",
     "role": "tank",
+    "gender": "female",
+    "species": "unknown",
+    "attackRange": "melee",
+    "releaseYear": 2020,
+    "resource": "Mana",
+    "positions": [
+      "top",
+      "support"
+    ],
     "stats": {
       "hp": 534,
       "mana": 274,
@@ -14880,6 +15804,14 @@
     "region": "Zaun",
     "element": "fée",
     "role": "support",
+    "gender": "female",
+    "species": "unknown",
+    "attackRange": "ranged",
+    "releaseYear": 2022,
+    "resource": "Mana",
+    "positions": [
+      "support"
+    ],
     "stats": {
       "hp": 382,
       "mana": 295,
@@ -14984,6 +15916,15 @@
     "region": "Shurima",
     "element": "combat",
     "role": "fighter",
+    "gender": "male",
+    "species": "god-warrior",
+    "attackRange": "melee",
+    "releaseYear": 2011,
+    "resource": "fureur",
+    "positions": [
+      "top",
+      "jungle"
+    ],
     "stats": {
       "hp": 512,
       "mana": 70,
@@ -15142,6 +16083,15 @@
     "region": "Void",
     "element": "ténèbres",
     "role": "assassin",
+    "gender": "male",
+    "species": "vastaya",
+    "attackRange": "melee",
+    "releaseYear": 2012,
+    "resource": "Ferocity",
+    "positions": [
+      "mid",
+      "jungle"
+    ],
     "stats": {
       "hp": 413,
       "mana": 3,
@@ -15264,6 +16214,15 @@
     "region": "Noxus",
     "element": "combat",
     "role": "fighter",
+    "gender": "female",
+    "species": "human",
+    "attackRange": "melee",
+    "releaseYear": 2011,
+    "resource": "aucune",
+    "positions": [
+      "top",
+      "jungle"
+    ],
     "stats": {
       "hp": 491,
       "mana": 210,
@@ -15440,6 +16399,15 @@
     "region": "Bandle City",
     "element": "combat",
     "role": "fighter",
+    "gender": "unknown",
+    "species": "yordle",
+    "attackRange": "melee",
+    "releaseYear": 2011,
+    "resource": "vapeur",
+    "positions": [
+      "top",
+      "jungle"
+    ],
     "stats": {
       "hp": 508,
       "mana": 105,
@@ -15550,6 +16518,14 @@
     "region": "Runeterra",
     "element": "psy",
     "role": "mage",
+    "gender": "male",
+    "species": "unknown",
+    "attackRange": "ranged",
+    "releaseYear": 2009,
+    "resource": "Mana",
+    "positions": [
+      "mid"
+    ],
     "stats": {
       "hp": 451,
       "mana": 310,
@@ -15702,6 +16678,14 @@
     "region": "Noxus",
     "element": "normal",
     "role": "marksman",
+    "gender": "female",
+    "species": "human",
+    "attackRange": "ranged",
+    "releaseYear": 2020,
+    "resource": "Mana",
+    "positions": [
+      "bot"
+    ],
     "stats": {
       "hp": 441,
       "mana": 244,
@@ -15806,6 +16790,15 @@
     "region": "Freljord",
     "element": "roche",
     "role": "tank",
+    "gender": "female",
+    "species": "human",
+    "attackRange": "melee",
+    "releaseYear": 2012,
+    "resource": "Mana",
+    "positions": [
+      "top",
+      "support"
+    ],
     "stats": {
       "hp": 541,
       "mana": 330,
@@ -15952,6 +16945,14 @@
     "region": "Runeterra",
     "element": "fée",
     "role": "support",
+    "gender": "female",
+    "species": "human",
+    "attackRange": "ranged",
+    "releaseYear": 2019,
+    "resource": "Mana",
+    "positions": [
+      "support"
+    ],
     "stats": {
       "hp": 371,
       "mana": 295,
@@ -16086,6 +17087,14 @@
     "region": "Piltover",
     "element": "fée",
     "role": "support",
+    "gender": "female",
+    "species": "human",
+    "attackRange": "ranged",
+    "releaseYear": 2020,
+    "resource": "Mana",
+    "positions": [
+      "support"
+    ],
     "stats": {
       "hp": 399,
       "mana": 302,
@@ -16220,6 +17229,15 @@
     "region": "Noxus",
     "element": "combat",
     "role": "fighter",
+    "gender": "male",
+    "species": "human",
+    "attackRange": "melee",
+    "releaseYear": 2020,
+    "resource": "agressivité",
+    "positions": [
+      "top",
+      "jungle"
+    ],
     "stats": {
       "hp": 519,
       "mana": 210,
@@ -16348,6 +17366,15 @@
     "region": "Runeterra",
     "element": "ténèbres",
     "role": "assassin",
+    "gender": "male",
+    "species": "demon",
+    "attackRange": "melee",
+    "releaseYear": 2009,
+    "resource": "Mana",
+    "positions": [
+      "mid",
+      "jungle"
+    ],
     "stats": {
       "hp": 441,
       "mana": 208,
@@ -16506,6 +17533,15 @@
     "region": "Ionia",
     "element": "roche",
     "role": "tank",
+    "gender": "male",
+    "species": "human",
+    "attackRange": "melee",
+    "releaseYear": 2010,
+    "resource": "Energy",
+    "positions": [
+      "top",
+      "support"
+    ],
     "stats": {
       "hp": 527,
       "mana": 330,
@@ -16652,6 +17688,15 @@
     "region": "Demacia",
     "element": "combat",
     "role": "fighter",
+    "gender": "female",
+    "species": "animal",
+    "attackRange": "melee",
+    "releaseYear": 2011,
+    "resource": "fureur",
+    "positions": [
+      "top",
+      "jungle"
+    ],
     "stats": {
       "hp": 515,
       "mana": 70,
@@ -16774,6 +17819,15 @@
     "region": "Zaun",
     "element": "roche",
     "role": "tank",
+    "gender": "male",
+    "species": "chemically-altered",
+    "attackRange": "melee",
+    "releaseYear": 2009,
+    "resource": "Mana",
+    "positions": [
+      "top",
+      "support"
+    ],
     "stats": {
       "hp": 555,
       "mana": 281,
@@ -16920,6 +17974,15 @@
     "region": "Demacia",
     "element": "roche",
     "role": "tank",
+    "gender": "male",
+    "species": "undead",
+    "attackRange": "melee",
+    "releaseYear": 2009,
+    "resource": "Mana",
+    "positions": [
+      "top",
+      "support"
+    ],
     "stats": {
       "hp": 558,
       "mana": 330,
@@ -17054,6 +18117,14 @@
     "region": "Shurima",
     "element": "normal",
     "role": "marksman",
+    "gender": "female",
+    "species": "human",
+    "attackRange": "ranged",
+    "releaseYear": 2009,
+    "resource": "Mana",
+    "positions": [
+      "bot"
+    ],
     "stats": {
       "hp": 420,
       "mana": 238,
@@ -17236,6 +18307,15 @@
     "region": "Ixtal",
     "element": "roche",
     "role": "tank",
+    "gender": "male",
+    "species": "unknown",
+    "attackRange": "melee",
+    "releaseYear": 2011,
+    "resource": "Mana",
+    "positions": [
+      "top",
+      "support"
+    ],
     "stats": {
       "hp": 541,
       "mana": 274,
@@ -17340,6 +18420,14 @@
     "region": "Runeterra",
     "element": "normal",
     "role": "marksman",
+    "gender": "male",
+    "species": "unknown",
+    "attackRange": "ranged",
+    "releaseYear": 2024,
+    "resource": "Mana",
+    "positions": [
+      "bot"
+    ],
     "stats": {
       "hp": 403,
       "mana": 210,
@@ -17420,6 +18508,14 @@
     "region": "Demacia",
     "element": "fée",
     "role": "support",
+    "gender": "female",
+    "species": "human",
+    "attackRange": "ranged",
+    "releaseYear": 2010,
+    "resource": "Mana",
+    "positions": [
+      "support"
+    ],
     "stats": {
       "hp": 385,
       "mana": 288,
@@ -17578,6 +18674,14 @@
     "region": "Targon",
     "element": "fée",
     "role": "support",
+    "gender": "female",
+    "species": "human",
+    "attackRange": "ranged",
+    "releaseYear": 2009,
+    "resource": "Mana",
+    "positions": [
+      "support"
+    ],
     "stats": {
       "hp": 424,
       "mana": 348,
@@ -17748,6 +18852,14 @@
     "region": "Noxus",
     "element": "psy",
     "role": "mage",
+    "gender": "male",
+    "species": "human",
+    "attackRange": "ranged",
+    "releaseYear": 2010,
+    "resource": "Mana",
+    "positions": [
+      "mid"
+    ],
     "stats": {
       "hp": 417,
       "mana": 380,
@@ -17876,6 +18988,14 @@
     "region": "Demacia",
     "element": "psy",
     "role": "mage",
+    "gender": "male",
+    "species": "human",
+    "attackRange": "melee",
+    "releaseYear": 2019,
+    "resource": "Mana",
+    "positions": [
+      "mid"
+    ],
     "stats": {
       "hp": 420,
       "mana": 380,
@@ -17998,6 +19118,14 @@
     "region": "Ionia",
     "element": "psy",
     "role": "mage",
+    "gender": "female",
+    "species": "unknown",
+    "attackRange": "ranged",
+    "releaseYear": 2012,
+    "resource": "Mana",
+    "positions": [
+      "mid"
+    ],
     "stats": {
       "hp": 394,
       "mana": 436,
@@ -18150,6 +19278,15 @@
     "region": "Runeterra",
     "element": "roche",
     "role": "tank",
+    "gender": "male",
+    "species": "demon",
+    "attackRange": "melee",
+    "releaseYear": 2015,
+    "resource": "Mana",
+    "positions": [
+      "top",
+      "support"
+    ],
     "stats": {
       "hp": 548,
       "mana": 277,
@@ -18260,6 +19397,14 @@
     "region": "Shurima",
     "element": "psy",
     "role": "mage",
+    "gender": "female",
+    "species": "human",
+    "attackRange": "ranged",
+    "releaseYear": 2016,
+    "resource": "Mana",
+    "positions": [
+      "mid"
+    ],
     "stats": {
       "hp": 385,
       "mana": 429,
@@ -18364,6 +19509,15 @@
     "region": "Noxus",
     "element": "ténèbres",
     "role": "assassin",
+    "gender": "male",
+    "species": "human",
+    "attackRange": "melee",
+    "releaseYear": 2011,
+    "resource": "Mana",
+    "positions": [
+      "mid",
+      "jungle"
+    ],
     "stats": {
       "hp": 461,
       "mana": 280,
@@ -18510,6 +19664,14 @@
     "region": "Demacia",
     "element": "fée",
     "role": "support",
+    "gender": "male",
+    "species": "human",
+    "attackRange": "melee",
+    "releaseYear": 2009,
+    "resource": "Mana",
+    "positions": [
+      "support"
+    ],
     "stats": {
       "hp": 451,
       "mana": 260,
@@ -18620,6 +19782,14 @@
     "region": "Bandle City",
     "element": "normal",
     "role": "marksman",
+    "gender": "male",
+    "species": "yordle",
+    "attackRange": "ranged",
+    "releaseYear": 2009,
+    "resource": "Mana",
+    "positions": [
+      "bot"
+    ],
     "stats": {
       "hp": 431,
       "mana": 234,
@@ -18778,6 +19948,14 @@
     "region": "Shadow Isles",
     "element": "fée",
     "role": "support",
+    "gender": "male",
+    "species": "undead",
+    "attackRange": "ranged",
+    "releaseYear": 2013,
+    "resource": "Mana",
+    "positions": [
+      "support"
+    ],
     "stats": {
       "hp": 434,
       "mana": 242,
@@ -18948,6 +20126,14 @@
     "region": "Bandle City",
     "element": "normal",
     "role": "marksman",
+    "gender": "female",
+    "species": "human",
+    "attackRange": "ranged",
+    "releaseYear": 2009,
+    "resource": "Mana",
+    "positions": [
+      "bot"
+    ],
     "stats": {
       "hp": 448,
       "mana": 210,
@@ -19112,6 +20298,15 @@
     "region": "Freljord",
     "element": "combat",
     "role": "fighter",
+    "gender": "male",
+    "species": "troll",
+    "attackRange": "melee",
+    "releaseYear": 2010,
+    "resource": "Mana",
+    "positions": [
+      "top",
+      "jungle"
+    ],
     "stats": {
       "hp": 505,
       "mana": 238,
@@ -19234,6 +20429,15 @@
     "region": "Freljord",
     "element": "combat",
     "role": "fighter",
+    "gender": "male",
+    "species": "unknown",
+    "attackRange": "melee",
+    "releaseYear": 2009,
+    "resource": "fureur",
+    "positions": [
+      "top",
+      "jungle"
+    ],
     "stats": {
       "hp": 537,
       "mana": 70,
@@ -19380,6 +20584,14 @@
     "region": "Runeterra",
     "element": "psy",
     "role": "mage",
+    "gender": "male",
+    "species": "human",
+    "attackRange": "ranged",
+    "releaseYear": 2009,
+    "resource": "Mana",
+    "positions": [
+      "mid"
+    ],
     "stats": {
       "hp": 423,
       "mana": 333,
@@ -19544,6 +20756,14 @@
     "region": "Piltover",
     "element": "normal",
     "role": "marksman",
+    "gender": "male",
+    "species": "chemically-altered",
+    "attackRange": "ranged",
+    "releaseYear": 2009,
+    "resource": "Mana",
+    "positions": [
+      "bot"
+    ],
     "stats": {
       "hp": 441,
       "mana": 210,
@@ -19696,6 +20916,15 @@
     "region": "Freljord",
     "element": "combat",
     "role": "fighter",
+    "gender": "male",
+    "species": "spirit",
+    "attackRange": "melee",
+    "releaseYear": 2009,
+    "resource": "Mana",
+    "positions": [
+      "top",
+      "jungle"
+    ],
     "stats": {
       "hp": 515,
       "mana": 190,
@@ -19809,6 +21038,15 @@
     "region": "Zaun",
     "element": "combat",
     "role": "fighter",
+    "gender": "male",
+    "species": "chemically-altered",
+    "attackRange": "melee",
+    "releaseYear": 2010,
+    "resource": "Mana",
+    "positions": [
+      "top",
+      "jungle"
+    ],
     "stats": {
       "hp": 508,
       "mana": 238,
@@ -19919,6 +21157,14 @@
     "region": "Ionia",
     "element": "normal",
     "role": "marksman",
+    "gender": "male",
+    "species": "unknown",
+    "attackRange": "ranged",
+    "releaseYear": 2012,
+    "resource": "Mana",
+    "positions": [
+      "bot"
+    ],
     "stats": {
       "hp": 420,
       "mana": 224,
@@ -20071,6 +21317,14 @@
     "region": "Demacia",
     "element": "normal",
     "role": "marksman",
+    "gender": "female",
+    "species": "human",
+    "attackRange": "ranged",
+    "releaseYear": 2011,
+    "resource": "Mana",
+    "positions": [
+      "bot"
+    ],
     "stats": {
       "hp": 385,
       "mana": 162,
@@ -20247,6 +21501,14 @@
     "region": "Bandle City",
     "element": "psy",
     "role": "mage",
+    "gender": "male",
+    "species": "yordle",
+    "attackRange": "ranged",
+    "releaseYear": 2009,
+    "resource": "Mana",
+    "positions": [
+      "mid"
+    ],
     "stats": {
       "hp": 406,
       "mana": 443,
@@ -20411,6 +21673,14 @@
     "region": "Void",
     "element": "psy",
     "role": "mage",
+    "gender": "male",
+    "species": "void",
+    "attackRange": "ranged",
+    "releaseYear": 2014,
+    "resource": "Mana",
+    "positions": [
+      "mid"
+    ],
     "stats": {
       "hp": 413,
       "mana": 428,
@@ -20521,6 +21791,14 @@
     "region": "Shadow Isles",
     "element": "psy",
     "role": "mage",
+    "gender": "female",
+    "species": "unknown",
+    "attackRange": "ranged",
+    "releaseYear": 2021,
+    "resource": "Mana",
+    "positions": [
+      "mid"
+    ],
     "stats": {
       "hp": 413,
       "mana": 443,
@@ -20607,6 +21885,15 @@
     "region": "Piltover",
     "element": "combat",
     "role": "fighter",
+    "gender": "female",
+    "species": "human",
+    "attackRange": "melee",
+    "releaseYear": 2012,
+    "resource": "Mana",
+    "positions": [
+      "top",
+      "jungle"
+    ],
     "stats": {
       "hp": 508,
       "mana": 207,
@@ -20753,6 +22040,15 @@
     "region": "Runeterra",
     "element": "combat",
     "role": "fighter",
+    "gender": "male",
+    "species": "revenant",
+    "attackRange": "melee",
+    "releaseYear": 2021,
+    "resource": "aucune",
+    "positions": [
+      "top",
+      "jungle"
+    ],
     "stats": {
       "hp": 491,
       "mana": 7000,
@@ -20863,6 +22159,14 @@
     "region": "Runeterra",
     "element": "psy",
     "role": "mage",
+    "gender": "male",
+    "species": "human",
+    "attackRange": "ranged",
+    "releaseYear": 2011,
+    "resource": "Mana",
+    "positions": [
+      "mid"
+    ],
     "stats": {
       "hp": 420,
       "mana": 384,
@@ -20979,6 +22283,14 @@
     "region": "Noxus",
     "element": "psy",
     "role": "mage",
+    "gender": "male",
+    "species": "human",
+    "attackRange": "ranged",
+    "releaseYear": 2010,
+    "resource": "afflux sanguin",
+    "positions": [
+      "mid"
+    ],
     "stats": {
       "hp": 425,
       "mana": 101,
@@ -21131,6 +22443,15 @@
     "region": "Freljord",
     "element": "combat",
     "role": "fighter",
+    "gender": "male",
+    "species": "animal",
+    "attackRange": "melee",
+    "releaseYear": 2011,
+    "resource": "Mana",
+    "positions": [
+      "top",
+      "jungle"
+    ],
     "stats": {
       "hp": 505,
       "mana": 245,
@@ -21259,6 +22580,15 @@
     "region": "Zaun",
     "element": "combat",
     "role": "fighter",
+    "gender": "male",
+    "species": "chemically-altered",
+    "attackRange": "melee",
+    "releaseYear": 2009,
+    "resource": "Mana",
+    "positions": [
+      "top",
+      "jungle"
+    ],
     "stats": {
       "hp": 484,
       "mana": 196,
@@ -21423,6 +22753,14 @@
     "region": "Runeterra",
     "element": "normal",
     "role": "marksman",
+    "gender": "female",
+    "species": "human",
+    "attackRange": "ranged",
+    "releaseYear": 2017,
+    "resource": "Mana",
+    "positions": [
+      "bot"
+    ],
     "stats": {
       "hp": 441,
       "mana": 238,
@@ -21569,6 +22907,14 @@
     "region": "Shurima",
     "element": "psy",
     "role": "mage",
+    "gender": "male",
+    "species": "god-warrior",
+    "attackRange": "ranged",
+    "releaseYear": 2011,
+    "resource": "Mana",
+    "positions": [
+      "mid"
+    ],
     "stats": {
       "hp": 417,
       "mana": 380,
@@ -21691,6 +23037,15 @@
     "region": "Demacia",
     "element": "combat",
     "role": "fighter",
+    "gender": "male",
+    "species": "human",
+    "attackRange": "melee",
+    "releaseYear": 2010,
+    "resource": "Mana",
+    "positions": [
+      "top",
+      "jungle"
+    ],
     "stats": {
       "hp": 498,
       "mana": 192,
@@ -21825,6 +23180,15 @@
     "region": "Ionia",
     "element": "combat",
     "role": "fighter",
+    "gender": "male",
+    "species": "human",
+    "attackRange": "melee",
+    "releaseYear": 2013,
+    "resource": "impulsion",
+    "positions": [
+      "top",
+      "jungle"
+    ],
     "stats": {
       "hp": 463,
       "mana": 70,
@@ -22001,6 +23365,15 @@
     "region": "Runeterra",
     "element": "combat",
     "role": "fighter",
+    "gender": "male",
+    "species": "human",
+    "attackRange": "melee",
+    "releaseYear": 2020,
+    "resource": "impulsion",
+    "positions": [
+      "top",
+      "jungle"
+    ],
     "stats": {
       "hp": 484,
       "mana": 350,
@@ -22135,6 +23508,15 @@
     "region": "Shadow Isles",
     "element": "combat",
     "role": "fighter",
+    "gender": "male",
+    "species": "undead",
+    "attackRange": "melee",
+    "releaseYear": 2011,
+    "resource": "Mana",
+    "positions": [
+      "top",
+      "jungle"
+    ],
     "stats": {
       "hp": 505,
       "mana": 210,
@@ -22257,6 +23639,14 @@
     "region": "Bandle City",
     "element": "fée",
     "role": "support",
+    "gender": "female",
+    "species": "yordle",
+    "attackRange": "ranged",
+    "releaseYear": 2019,
+    "resource": "Mana",
+    "positions": [
+      "support"
+    ],
     "stats": {
       "hp": 350,
       "mana": 358,
@@ -22380,6 +23770,15 @@
     "region": "Zaun",
     "element": "roche",
     "role": "tank",
+    "gender": "male",
+    "species": "chemically-altered",
+    "attackRange": "melee",
+    "releaseYear": 2013,
+    "resource": "aucune",
+    "positions": [
+      "top",
+      "support"
+    ],
     "stats": {
       "hp": 579,
       "mana": 260,
@@ -22490,6 +23889,15 @@
     "region": "Ionia",
     "element": "ténèbres",
     "role": "assassin",
+    "gender": "male",
+    "species": "human",
+    "attackRange": "ranged",
+    "releaseYear": 2012,
+    "resource": "Energy",
+    "positions": [
+      "mid",
+      "jungle"
+    ],
     "stats": {
       "hp": 458,
       "mana": 140,
@@ -22642,6 +24050,14 @@
     "region": "Zaun",
     "element": "normal",
     "role": "marksman",
+    "gender": "female",
+    "species": "human",
+    "attackRange": "ranged",
+    "releaseYear": 2022,
+    "resource": "Mana",
+    "positions": [
+      "bot"
+    ],
     "stats": {
       "hp": 420,
       "mana": 175,
@@ -22746,6 +24162,14 @@
     "region": "Piltover",
     "element": "psy",
     "role": "mage",
+    "gender": "male",
+    "species": "yordle",
+    "attackRange": "ranged",
+    "releaseYear": 2012,
+    "resource": "Mana",
+    "positions": [
+      "mid"
+    ],
     "stats": {
       "hp": 424,
       "mana": 436,
@@ -22886,6 +24310,14 @@
     "region": "Void",
     "element": "fée",
     "role": "support",
+    "gender": "male",
+    "species": "unknown",
+    "attackRange": "ranged",
+    "releaseYear": 2009,
+    "resource": "Mana",
+    "positions": [
+      "support"
+    ],
     "stats": {
       "hp": 402,
       "mana": 366,
@@ -23002,6 +24434,14 @@
     "region": "Targon",
     "element": "psy",
     "role": "mage",
+    "gender": "female",
+    "species": "celestial",
+    "attackRange": "ranged",
+    "releaseYear": 2017,
+    "resource": "Mana",
+    "positions": [
+      "mid"
+    ],
     "stats": {
       "hp": 441,
       "mana": 398,
@@ -23124,6 +24564,14 @@
     "region": "Runeterra",
     "element": "psy",
     "role": "mage",
+    "gender": "female",
+    "species": "unknown",
+    "attackRange": "ranged",
+    "releaseYear": 2012,
+    "resource": "Mana",
+    "positions": [
+      "mid"
+    ],
     "stats": {
       "hp": 402,
       "mana": 393,

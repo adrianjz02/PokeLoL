@@ -1,12 +1,6 @@
 const { SlashCommandBuilder, EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle } = require('discord.js');
 const { allChampions, getColorByElement, capitalizeFirstLetter, getRoleName, getStatsString, getRandomChampion } = require('../config/championsManager');
-
-// Pour simuler une base de données simple pendant le développement initial
-// Plus tard, vous voudrez utiliser une vraie base de données (MongoDB, etc.)
-const userDatabase = new Map();
-
-// Stockage temporaire des propositions de champions starter pour chaque utilisateur
-const starterPropositions = new Map();
+const { getOrCreateUser, hasUserChampion, addChampionToUser } = require('../utils/database');
 
 // Fonction pour générer 3 champions starters aléatoires et uniques
 function generateStarterChampions() {
@@ -35,26 +29,21 @@ module.exports = {
     
     async execute(interaction) {
         const userId = interaction.user.id;
+        const username = interaction.user.username;
+        
+        // Créer ou récupérer l'utilisateur dans la base de données
+        const user = getOrCreateUser(userId, username);
         
         // Vérifier si l'utilisateur a déjà un champion starter
-        if (userDatabase.has(userId)) {
+        if (hasUserChampion(userId)) {
             return interaction.reply({
                 content: "⚠️ Vous avez déjà choisi votre premier champion! Utilisez `/profile` pour voir votre champion actuel.",
                 ephemeral: true
             });
         }
         
-        // Vérifier si l'utilisateur a déjà des propositions de starters
-        let userStarters;
-        if (starterPropositions.has(userId)) {
-            // Utiliser les propositions déjà générées
-            userStarters = starterPropositions.get(userId);
-        } else {
-            // Générer de nouvelles propositions
-            userStarters = generateStarterChampions();
-            // Stocker les propositions pour cet utilisateur
-            starterPropositions.set(userId, userStarters);
-        }
+        // Générer 3 champions starters aléatoires
+        const userStarters = generateStarterChampions();
         
         // Créer les embeds pour chaque champion starter
         const starterEmbeds = userStarters.map(champion => {
@@ -112,95 +101,83 @@ module.exports = {
                     .setLabel(`Choisir ${userStarters[2].name}`)
                     .setStyle(ButtonStyle.Success)
             );
-        
-        // Répondre avec le premier embed et les boutons
+            
+        // Envoyer le message avec le premier champion et les boutons
         const response = await interaction.reply({
-            content: "🌟 **Bienvenue dans le monde de PokeLoL!** 🌟\nChoisissez votre premier champion pour commencer votre aventure:",
             embeds: [starterEmbeds[0]],
             components: [viewButtons, confirmButtons],
             fetchReply: true
         });
         
-        // Créer un collecteur pour gérer les réponses aux boutons
-        const filter = i => 
-            (i.customId.startsWith('starter_view_') || i.customId.startsWith('starter_choose_')) 
-            && i.user.id === interaction.user.id;
-            
-        const collector = response.createMessageComponentCollector({ filter, time: 120000 }); // 2 minutes
+        // Créer un collecteur pour gérer les interactions avec les boutons
+        const filter = i => i.user.id === interaction.user.id && (
+            i.customId.startsWith('starter_view_') || i.customId.startsWith('starter_choose_')
+        );
+        
+        const collector = response.createMessageComponentCollector({ filter, time: 300000 }); // 5 minutes
         
         collector.on('collect', async i => {
             const customId = i.customId;
             
-            // Si l'utilisateur clique sur un bouton pour voir un champion
             if (customId.startsWith('starter_view_')) {
-                const selectedId = customId.split('_')[2];
-                const championIndex = userStarters.findIndex(c => c.id === selectedId);
+                // L'utilisateur veut voir un champion
+                const championId = customId.replace('starter_view_', '');
+                const championIndex = userStarters.findIndex(c => c.id === championId);
                 
                 if (championIndex !== -1) {
+                    // Mettre à jour le message avec le champion sélectionné
                     await i.update({
                         embeds: [starterEmbeds[championIndex]],
                         components: [viewButtons, confirmButtons]
                     });
                 }
-            }
-            
-            // Si l'utilisateur confirme son choix
-            else if (customId.startsWith('starter_choose_')) {
-                const selectedId = customId.split('_')[2];
-                const selectedChampion = userStarters.find(c => c.id === selectedId);
+            } else if (customId.startsWith('starter_choose_')) {
+                // L'utilisateur a choisi un champion
+                const championId = customId.replace('starter_choose_', '');
+                const champion = userStarters.find(c => c.id === championId);
                 
-                // Enregistrer le choix dans notre "base de données" temporaire
-                userDatabase.set(userId, {
-                    userId: userId,
-                    username: interaction.user.username,
-                    champions: [
-                        {
-                            ...selectedChampion,
-                            level: 1,
-                            exp: 0,
-                            nextLevelExp: 100,
-                            isFavorite: true
-                        }
-                    ],
-                    inventory: {
-                        gold: 500,
-                        items: []
-                    },
-                    stats: {
-                        championsCollected: 1,
-                        raidProgress: 0,
-                        questsCompleted: 0
-                    },
-                    createdAt: new Date()
-                });
-                
-                // Supprimer les propositions de starters pour cet utilisateur
-                starterPropositions.delete(userId);
-                
-                const confirmEmbed = new EmbedBuilder()
-                    .setColor(getColorByElement(selectedChampion.element))
-                    .setTitle(`🎉 Félicitations! 🎉`)
-                    .setDescription(`Vous avez choisi **${selectedChampion.name}** comme votre premier champion PokéLoL!`)
-                    .setThumbnail(selectedChampion.iconUrl)
-                    .addFields(
-                        { name: 'Prochaines étapes', value: 'Utilisez `/profile` pour voir votre profil.\nPartez à l\'aventure avec `/jungle` pour attraper plus de champions!\nRevenez tous les jours pour les récompenses quotidiennes avec `/daily`.' }
-                    );
-                
-                await i.update({
-                    content: `✅ **${interaction.user.username}**, votre aventure dans PokeLoL commence maintenant!`,
-                    embeds: [confirmEmbed],
-                    components: []
-                });
-                
-                // Arrêter le collecteur car l'utilisateur a fait son choix
-                collector.stop();
+                if (champion) {
+                    // Ajouter le champion à l'utilisateur dans la base de données
+                    const userChampion = addChampionToUser(userId, championId, true); // true pour le marquer comme favori
+                    
+                    if (userChampion) {
+                        // Créer un embed de confirmation
+                        const confirmEmbed = new EmbedBuilder()
+                            .setColor(getColorByElement(champion.element))
+                            .setTitle(`🎉 Félicitations! 🎉`)
+                            .setDescription(`Vous avez choisi **${champion.name}** comme votre premier champion PokéLoL!`)
+                            .setThumbnail(champion.iconUrl)
+                            .setImage(champion.imageUrl)
+                            .addFields(
+                                { name: 'Niveau', value: '1', inline: true },
+                                { name: 'XP', value: '0/100', inline: true },
+                                { name: 'Prochain pas', value: 'Utilisez `/profile` pour voir votre champion et `/loldle` ou `/quiz` pour gagner des récompenses quotidiennes!', inline: false }
+                            );
+                        
+                        // Mettre à jour le message avec la confirmation
+                        await i.update({
+                            embeds: [confirmEmbed],
+                            components: [] // Supprimer les boutons
+                        });
+                        
+                        // Arrêter le collecteur
+                        collector.stop();
+                    } else {
+                        // Erreur lors de l'ajout du champion
+                        await i.reply({
+                            content: '❌ Une erreur est survenue lors du choix de votre champion. Veuillez réessayer.',
+                            ephemeral: true
+                        });
+                    }
+                }
             }
         });
         
         collector.on('end', async (collected, reason) => {
             if (reason === 'time' && collected.size === 0) {
+                // Le temps est écoulé et aucune interaction n'a eu lieu
                 await interaction.editReply({
-                    content: "⏱️ Le temps imparti pour choisir votre champion de départ est écoulé. Utilisez à nouveau `/starter` quand vous serez prêt à faire votre choix.",
+                    content: '⏱️ Le temps pour choisir un champion est écoulé. Utilisez à nouveau la commande `/starter` pour recommencer.',
                     embeds: [],
                     components: []
                 });

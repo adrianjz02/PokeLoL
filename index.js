@@ -2,6 +2,10 @@ require('dotenv').config();
 const { Client, GatewayIntentBits, Collection } = require('discord.js');
 const fs = require('fs');
 const path = require('path');
+const { initializeDatabase } = require('./src/utils/database');
+
+// Initialisation de la base de données
+initializeDatabase();
 
 // Création du client Discord avec uniquement les intents nécessaires et autorisés par défaut
 const client = new Client({ 
