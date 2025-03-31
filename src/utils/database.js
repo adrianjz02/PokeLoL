@@ -628,5 +628,42 @@ module.exports = {
     markRewardsClaimed,
     addItemToInventory,
     getUserInventory,
-    useInventoryItem
+    useInventoryItem,
+    updateChampionFavoriteStatus
 };
+
+/**
+ * Met à jour le statut favori d'un champion
+ * @param {String} userId - ID Discord de l'utilisateur
+ * @param {String} championId - ID du champion à mettre à jour
+ * @param {Boolean} isFavorite - Nouveau statut favori
+ * @returns {Object|null} - Données du champion après mise à jour
+ */
+function updateChampionFavoriteStatus(userId, championId, isFavorite) {
+    // Vérifier que la connexion est ouverte
+    if (!db || !db.open) {
+        if (!openConnection()) {
+            throw new Error("La connexion à la base de données n'est pas disponible");
+        }
+    }
+    
+    try {
+        const champion = getUserChampion(userId, championId);
+        
+        if (!champion) {
+            return null;
+        }
+        
+        // Mettre à jour le statut favori
+        db.prepare(`
+            UPDATE user_champions 
+            SET isFavorite = ? 
+            WHERE userId = ? AND championId = ?
+        `).run(isFavorite ? 1 : 0, userId, championId);
+        
+        return getUserChampion(userId, championId);
+    } catch (error) {
+        console.error("Erreur lors de la mise à jour du statut favori:", error);
+        return null;
+    }
+}

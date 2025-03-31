@@ -40,28 +40,22 @@ module.exports = {
         const dailyAvailable = !hasClaimedRewards(userId, 'daily');
         const weeklyAvailable = !hasClaimedRewards(userId, 'weekly');
         
-        // Déterminer l'équipe principale (les champions favoris, max 6)
+        // Déterminer l'équipe principale (uniquement les champions favoris, max 6)
         const mainTeam = userChampions
             .filter(champ => champ.isFavorite === 1)
             .slice(0, 6);
         
-        // Compléter l'équipe avec les champions de plus haut niveau si moins de 6 favoris
-        if (mainTeam.length < 6) {
-            const remainingSlots = 6 - mainTeam.length;
-            const otherChampions = userChampions
-                .filter(champ => champ.isFavorite === 0)
-                .sort((a, b) => b.level - a.level)
-                .slice(0, remainingSlots);
-            
-            mainTeam.push(...otherChampions);
-        }
+        // Ne pas compléter automatiquement l'équipe avec des champions non favoris
+        // L'utilisateur doit explicitement choisir les champions de son équipe
         
         // Créer la liste des champions de l'équipe principale avec leur niveau
         let teamList = '';
         
-        for (let i = 0; i < 6; i++) {
-            const teamMember = mainTeam[i];
-            if (teamMember) {
+        if (mainTeam.length === 0) {
+            teamList = '*Aucun champion dans l\'équipe. Utilisez la commande `/team` pour ajouter des champions à votre équipe.*';
+        } else {
+            for (let i = 0; i < mainTeam.length; i++) {
+                const teamMember = mainTeam[i];
                 // Trouver les détails complets du champion
                 const championDetails = allChampions.find(c => c.id === teamMember.championId);
                 if (championDetails) {
@@ -69,7 +63,10 @@ module.exports = {
                 } else {
                     teamList += `${i+1}. **Champion inconnu** - Niveau ${teamMember.level}\n`;
                 }
-            } else {
+            }
+            
+            // Ajouter des emplacements vides pour compléter l'équipe
+            for (let i = mainTeam.length; i < 6; i++) {
                 teamList += `${i+1}. *Emplacement vide*\n`;
             }
         }
